@@ -154,4 +154,7 @@ Return in Hibernate Code Generation Configurations and be sure that reveng.xml i
 
 <img src="https://user-images.githubusercontent.com/11760847/221444280-0d9c0f8d-5ae6-451d-89f7-ccbb510c9deb.png" width="60%" height="60%">
 
-The generated files will be created in the package previously set.
+The generated files will be created in the package previously set:
+
+<img src="https://user-images.githubusercontent.com/11760847/221444676-9dcf451e-10e6-4610-9901-4b5719f10abb.png" width="25%" height="25%">
+
