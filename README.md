@@ -5,6 +5,7 @@
 - [Project creation](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#project-creation)
 - [Hibernate dependencies](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#hibernate-dependencies)
 - [Persistance file](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#persistance-file-hibernatecfgxml)
+- [Try code](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#try-code)
 
 ## Prerequisites
 - MySQL: https://dev.mysql.com/downloads/installer/ using all default options
@@ -102,12 +103,29 @@ If is all ok, we must see the database connection with tables inside the tab "Hi
 
 <img src="https://user-images.githubusercontent.com/11760847/221441164-e451499a-fe0e-445f-bfd2-7c619bccd0a3.png" width="35%" height="35%">
 
-## Proviamo il codice del Professore
+## Try code
 
 Now we can try some code for testing connection.
 
-Ho usato l’esempio di Course + CourseManager
-Crea una nuova classe Course nel package model e incollaci il codice del Course.java del professore, fai attenzione al package (non sovrascriverlo) e cambia le dipendenze da javax a jakarta
-Crea una nuova classe CourseManager nel package app e incollaci il codice del CourseManager.java del professore, stesso discorso di sopra e in più devi incollare questo import: import com.hibernate.model.Course;
-In CourseManager cambia l’assegnazione di CFGFILE con "/hibernate.cfg.xml" e in hibernate.cfg.xml inserisci <mapping class="com.hibernate.model.Course" /> prima di </session-factory>
-Tasto destro su CourseManager -> Run As -> Java Application -> dovresti vedere del codice rosso e bianco (SQL) come output. Vai a vedere se ha modificato la tabella course
+Database table:
+```
+CREATE TABLE `courses` (
+  `COURSE_ID` bigint NOT NULL,
+  `COURSE_NAME` varchar(255) NOT NULL,
+  PRIMARY KEY (`COURSE_ID`)
+);
+```
+
+Create and copy/paste these 3 java classes: 
+- [Course.java](./Course.java) in `com.hibernate.model` &rarr; it contains the definition of the table
+- [CourseManager.java](./CourseManager.java) in `com.hibernate.app` &rarr; it contains CRUD operations on the table 
+- [App.java](./App.java) in `com.hibernate.app` &rarr; it contains the main
+
+Make attention at packages, jakarta dependencies and CFGFILE definition.
+
+Insert in `hibernate.cfg.xml` the connection between hibernate and java classes: `<mapping class="com.hibernate.model.Course" />`
+
+Right click on CourseManager &rarr; Run As &rarr; Java Application &rarr; you must see red (INFO) and white (SQL) code in output terminal.
+
+Check if there is some data inside `courses` table.
+
