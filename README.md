@@ -1,4 +1,4 @@
-# Configure Hibernate app in Eclipse
+# Configure Hibernate in Eclipse
 ## Index
 - [Prerequisites](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#prerequisites)
 - [MySQL Driver creation](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#mysql-driver-creation)
@@ -158,3 +158,6 @@ The generated files will be created in the package previously set:
 
 <img src="https://user-images.githubusercontent.com/11760847/221444676-9dcf451e-10e6-4610-9901-4b5719f10abb.png" width="25%" height="25%">
 
+Unfortunately the class generated is without @annotations:
+
+<img src="https://user-images.githubusercontent.com/11760847/221445121-666f0495-1957-4f2c-a7ee-eef7539a3cc6.png" width="50%" height="50%">
