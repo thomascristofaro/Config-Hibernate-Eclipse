@@ -134,3 +134,24 @@ Check if there is some data inside `courses` table.
 
 ## Database Reverse Engineering
 
+With this setup, hibernate can create java class from database tables.
+
+Run &rarr; Hibernate Code Generation &rarr; Hibernate Code Generation Configurations &rarr; New Configuration:
+
+<img src="https://user-images.githubusercontent.com/11760847/221443894-64d16356-bffe-4f57-8ce8-d668580b06ae.png" width="60%" height="60%">
+
+<img src="https://user-images.githubusercontent.com/11760847/221443997-3c39b637-3a6c-43c4-ac2b-e02f6c5e44b1.png" width="60%" height="60%">
+
+In reveng.xml click on Setup &rarr; Create New:
+
+<img src="https://user-images.githubusercontent.com/11760847/221444110-f0b6a3d9-cd8b-4786-8881-3a08ee97af07.png" width="50%" height="50%">
+
+Then next, include just a table for testing creation and finish.
+
+<img src="https://user-images.githubusercontent.com/11760847/221444167-142c222b-c678-4949-8fc7-05789412bc63.png" width="50%" height="50%">
+
+Return in Hibernate Code Generation Configurations and be sure that reveng.xml is compiled and then Run the Code Generation:
+
+<img src="https://user-images.githubusercontent.com/11760847/221444280-0d9c0f8d-5ae6-451d-89f7-ccbb510c9deb.png" width="60%" height="60%">
+
+The generated files will be created in the package previously set.
