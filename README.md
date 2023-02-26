@@ -6,6 +6,7 @@
 - [Hibernate dependencies](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#hibernate-dependencies)
 - [Persistance file](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#persistance-file-hibernatecfgxml)
 - [Try code](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#try-code)
+- [Database Reverse Engineering](https://github.com/thomascristofaro/Config-Hibernate-Eclipse#database-reverse-engineering)
 
 ## Prerequisites
 - MySQL: https://dev.mysql.com/downloads/installer/ using all default options
@@ -121,11 +122,15 @@ Create and copy/paste these 3 java classes:
 - [CourseManager.java](./CourseManager.java) in `com.hibernate.app` &rarr; it contains CRUD operations on the table 
 - [App.java](./App.java) in `com.hibernate.app` &rarr; it contains the main
 
-Make attention at packages, jakarta dependencies and CFGFILE definition.
+Make attention at packages, jakarta importing and CFGFILE path.
 
-Insert in `hibernate.cfg.xml` the connection between hibernate and java classes: `<mapping class="com.hibernate.model.Course" />`
+Insert in `hibernate.cfg.xml` the connection between hibernate and java classes: 
+
+`<mapping class="com.hibernate.model.Course" />`
 
 Right click on CourseManager &rarr; Run As &rarr; Java Application &rarr; you must see red (INFO) and white (SQL) code in output terminal.
 
 Check if there is some data inside `courses` table.
+
+## Database Reverse Engineering
 
