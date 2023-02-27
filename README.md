@@ -30,6 +30,7 @@ Window &rarr; Preferences &rarr; Data Management &rarr; Connectivity &rarr; Driv
 <img src="https://user-images.githubusercontent.com/11760847/221429454-950cc635-d381-4dc1-b7d8-82c4c3828919.png" width="50%" height="50%">
 
 In JAR List remove all and add the JAR that you installed with MySQL (maybe in C:\Program Files (x86)\MySQL\Connector J 8.0):
+
 <img src="https://user-images.githubusercontent.com/11760847/221429514-078477af-3a0e-4eab-9a57-1786ee148a85.png" width="50%" height="50%">
 
 Continue in tab Properties and then save it.
